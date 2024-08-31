@@ -39,7 +39,10 @@ public class Quiz {
         int respuestaUsuario = Integer.parseInt(scanner.nextLine());
         evaluarPregunta(pregunta, respuestaUsuario);
     }
-    public void iniciarQuiz() {
+    public void iniciarQuiz(List<Pregunta> preguntas) {
+        for(Pregunta pregunta : preguntas) {
+            agregarPregunta(pregunta);
+        }
         for (Pregunta pregunta : preguntas) {
             realizarPregunta(pregunta);
         }
